@@ -42,7 +42,7 @@ sexy_spell_entry_activate_language(entry, lang)
 		GError* error = NULL;
 	CODE:
 		RETVAL = sexy_spell_entry_activate_language(entry, lang, &error);
-		
+
 		if (error)
 			gperl_croak_gerror(NULL, error);
 	OUTPUT:
