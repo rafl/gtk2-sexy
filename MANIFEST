@@ -1,0 +1,12 @@
+pm/Sexy.pm
+xs/Sexy.xs
+sexyperl.h
+MANIFEST
+Makefile.PL
+examples/test-url-label.pl
+examples/test-spell-entry.pl
+examples/test-icon-entry.pl
+maps
+t/01use.t
+ChangeLog
+META.yml                                 Module meta-data (added by MakeMaker)
