@@ -6,3 +6,4 @@ build
 *.c
 *.o
 pm_to_blib
+MANIFEST.bak
