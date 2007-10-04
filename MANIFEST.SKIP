@@ -1,0 +1,7 @@
+\.(?:o|c|bs)$
+^\.git
+^Makefile$
+^Gtk2-Sexy-
+^MANIFEST.bak$
+blib\b
+build\b
