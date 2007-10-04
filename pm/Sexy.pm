@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use base 'DynaLoader';
 
-our $VERSION = 0.02;
+our $VERSION = '0.02';
 
 sub dl_load_flags { 0x01 }
 
