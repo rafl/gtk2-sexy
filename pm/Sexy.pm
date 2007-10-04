@@ -37,13 +37,13 @@ right-click menu is provided for misspelled words offering suggestions.
 =item SexyUrlLabel
 
 SexyUrlLabel is a GtkLabel with support for embedded hyperlinks. It uses a
-modified form of the Pango markup format that supports the 
+modified form of the Pango markup format that supports the
 
   <a href="...">...</a>
-  
+
 tag. The hyperlink will appear in blue and can be activated by clicking it.
 Right-clicking the hyperlink displays a menu offering the ability to activate
-it or to copy the URL. 
+it or to copy the URL.
 
 =back
 
