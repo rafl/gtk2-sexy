@@ -1,0 +1,8 @@
+Gtk2-Sexy-*
+Makefile
+*.bs
+blib
+build
+*.c
+*.o
+pm_to_blib
