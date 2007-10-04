@@ -2,11 +2,11 @@
 
 MODULE = Gtk2::Sexy::TreeView	PACKAGE = Gtk2::Sexy::TreeView	PREFIX = sexy_tree_view_
 
-GtkWidget*
-sexy_tree_view_new(class);
+GtkWidget *
+sexy_tree_view_new (class);
 	C_ARGS:
 
 void
-sexy_tree_view_set_tooltip_label_column(treeview, column)
-		SexyTreeView* treeview
+sexy_tree_view_set_tooltip_label_column (treeview, column)
+		SexyTreeView *treeview
 		guint column

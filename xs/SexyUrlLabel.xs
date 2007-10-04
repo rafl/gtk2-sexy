@@ -2,11 +2,11 @@
 
 MODULE = Gtk2::Sexy::UrlLabel	PACKAGE = Gtk2::Sexy::UrlLabel	PREFIX = sexy_url_label_
 
-GtkWidget*
-sexy_url_label_new(class);
+GtkWidget *
+sexy_url_label_new (class);
 	C_ARGS:
 
 void
-sexy_url_label_set_markup(url_label, markup)
-		SexyUrlLabel* url_label
-		const gchar* markup
+sexy_url_label_set_markup (url_label, markup)
+		SexyUrlLabel *url_label
+		const gchar *markup
