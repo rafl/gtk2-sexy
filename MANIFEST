@@ -1,12 +1,19 @@
-pm/Sexy.pm
-xs/Sexy.xs
-sexyperl.h
-MANIFEST
-Makefile.PL
-examples/test-url-label.pl
-examples/test-spell-entry.pl
-examples/test-icon-entry.pl
-maps
-t/01use.t
 ChangeLog
-META.yml                                 Module meta-data (added by MakeMaker)
+examples/test-icon-entry.pl
+examples/test-spell-entry.pl
+examples/test-tooltip.pl
+examples/test-tree-view.pl
+examples/test-url-label.pl
+Makefile.PL
+MANIFEST
+maps
+META.yml			Module meta-data (added by MakeMaker)
+pm/Sexy.pm
+sexyperl.h
+t/01use.t
+xs/Sexy.xs
+xs/SexyIconEntry.xs
+xs/SexySpellEntry.xs
+xs/SexyTooltip.xs
+xs/SexyTreeView.xs
+xs/SexyUrlLabel.xs
