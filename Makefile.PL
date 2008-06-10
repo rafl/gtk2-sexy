@@ -51,7 +51,7 @@ sub postamble {
 		. Glib::MakeHelper->postamble_docs_full(
 				DEPENDS		=> $main::sexy,
 				XS_FILES	=> \@main::xs_files,
-				COPYRIGHT	=> 'Copyright (C) 2005-2006 by Florian Ragwitz'
+				COPYRIGHT	=> 'Copyright (C) 2005-2008 by Florian Ragwitz'
 		);
 }
 

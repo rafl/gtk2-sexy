@@ -57,7 +57,7 @@ Florian Ragwitz <rafl@debian.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2005-2007 by Florian Ragwitz
+Copyright (C) 2005-2008 by Florian Ragwitz
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free
