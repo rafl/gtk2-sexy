@@ -1,59 +1,31 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 use strict;
 use warnings;
-use Cwd;
-use File::Spec;
-use Gtk2::CodeGen;
-use Glib::MakeHelper;
-use ExtUtils::Depends;
-use ExtUtils::PkgConfig;
-use ExtUtils::MakeMaker;
+use lib 'ext';
+use inc::Module::Install;
 
-mkdir 'build', 0777;
+name 'Gtk2-Sexy';
+license 'lgpl';
+perl_version '5.008';
+all_from 'lib/Gtk2/Sexy.pm';
 
-my %pkgconfig = ExtUtils::PkgConfig->find('libsexy');
+sexy;
 
-Gtk2::CodeGen->parse_maps('sexy');
-Gtk2::CodeGen->write_boot(ignore => qr/^Gtk2::Sexy$/);
+requires 'Gtk2';
 
-our @xs_files = <xs/*.xs>;
+configure_requires 'Cwd';
+configure_requires 'File::Spec';
+configure_requires 'Gtk2::CodeGen';
+configure_requires 'Glib::MakeHelper';
+configure_requires 'ExtUtils::Depends';
+configure_requires 'ExtUtils::PkgConfig';
 
-our $sexy = ExtUtils::Depends->new('Gtk2::Sexy', 'Gtk2');
-$sexy->set_inc($pkgconfig{cflags});
-$sexy->set_libs($pkgconfig{libs});
-$sexy->add_xs(@xs_files);
-$sexy->add_pm('pm/Sexy.pm', '$(INST_LIBDIR)/Sexy.pm');
-my $cwd = cwd();
-$sexy->add_typemaps(map { File::Spec->catfile($cwd, $_) } File::Spec->catfile('build', 'sexy.typemap'));
+test_requires 'Gtk2::TestHelper';
 
-$sexy->install(File::Spec->catfile('build', 'sexy-autogen.h'));
-$sexy->save_config(File::Spec->catfile('build', 'IFiles.pm'));
+no_index directory => qw/inc ext/;
 
-WriteMakefile(
-	NAME			=> 'Gtk2::Sexy',
-	VERSION_FROM	=> File::Spec->catfile('pm', 'Sexy.pm'),
-	XSPROTOARG		=> '-noprototypes',
-	MAN3PODS		=> {
-		'pm/Sexy.pm'	=> '$(INST_MAN3DIR)/Gtk2::Sexy.$(MAN3EXT)',
-		Glib::MakeHelper->do_pod_files(@xs_files)
-	},
-	$sexy->get_makefile_vars,
-	PREREQ_PM		=> {
-		Gtk2	=> 0
-	}
-);
+extra_tests;
+auto_provides;
 
-package MY;
-
-sub postamble {
-	return Glib::MakeHelper->postamble_clean()
-		. Glib::MakeHelper->postamble_docs_full(
-				DEPENDS		=> $main::sexy,
-				XS_FILES	=> \@main::xs_files,
-				COPYRIGHT	=> 'Copyright (C) 2005-2008 by Florian Ragwitz'
-		) . <<"EOM"
-README: pm/Sexy.pm
-\tpod2text \$< > \$@
-EOM
-}
+WriteAll;
