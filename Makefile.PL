@@ -52,7 +52,8 @@ sub postamble {
 				DEPENDS		=> $main::sexy,
 				XS_FILES	=> \@main::xs_files,
 				COPYRIGHT	=> 'Copyright (C) 2005-2008 by Florian Ragwitz'
-		);
+		) . <<"EOM"
+README: pm/Sexy.pm
+\tpod2text \$< > \$@
+EOM
 }
-
-package MAIN;
