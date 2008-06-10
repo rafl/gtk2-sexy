@@ -2,6 +2,8 @@
 
 MODULE = Gtk2::Sexy::SpellEntry	PACKAGE = Gtk2::Sexy::SpellEntry	PREFIX = sexy_spell_entry_
 
+PROTOTYPES: disable
+
 GtkWidget *
 sexy_spell_entry_new (class)
 	C_ARGS:

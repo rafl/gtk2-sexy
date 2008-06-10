@@ -2,6 +2,8 @@
 
 MODULE = Gtk2::Sexy::Tooltip	PACKAGE = Gtk2::Sexy::Tooltip	PREFIX = sexy_tooltip_
 
+PROTOTYPES: disable
+
 GtkWidget *
 sexy_tooltip_new (class);
 	C_ARGS:

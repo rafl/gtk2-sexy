@@ -2,6 +2,8 @@
 
 MODULE = Gtk2::Sexy::IconEntry	PACKAGE = Gtk2::Sexy::IconEntry	PREFIX = sexy_icon_entry_
 
+PROTOTYPES: disable
+
 GtkWidget *
 sexy_icon_entry_new (class)
 	C_ARGS:

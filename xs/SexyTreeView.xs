@@ -2,6 +2,8 @@
 
 MODULE = Gtk2::Sexy::TreeView	PACKAGE = Gtk2::Sexy::TreeView	PREFIX = sexy_tree_view_
 
+PROTOTYPES: disable
+
 GtkWidget *
 sexy_tree_view_new (class);
 	C_ARGS:
