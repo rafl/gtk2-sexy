@@ -1,14 +1,15 @@
-package Gtk2::Sexy;
-
 use strict;
 use warnings;
-use base 'DynaLoader';
+
+package Gtk2::Sexy;
 
 our $VERSION = '0.02';
 
+use base 'DynaLoader';
+
 sub dl_load_flags { 0x01 }
 
-bootstrap Gtk2::Sexy $VERSION;
+__PACKAGE__->bootstrap($VERSION);
 
 =head1 NAME
 
