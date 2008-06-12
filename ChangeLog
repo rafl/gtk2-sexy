@@ -1,3 +1,22 @@
+Thu, 12 Jun 2008 14:35:33 +0200
+* Version: 0.03
+* Add pod and podcoverage tests.
+* Specify prototyping behaviour in the xs files.
+* Some reformatting.
+* Switch to Module::Install.
+* Use a proper lib directory.
+* Makefile rule to generate README.
+* Add README.
+* Relicense under LGPL 2.1.
+* Update copyright statements.
+* Use ppport.h.
+* Quote VERSION.
+* Copyright update.
+* Remove some tailing whitespace.
+* Some coding style cleanups.
+* Remove some tailing whitespace.
+* Generate MANIFEST from MANIFEST.SKIP.
+
 Thu, 29 Jun 2006 17:38:37 +0200
 * Version: 0.02
 * xs/SexyIconEntry.xs:
@@ -13,8 +32,10 @@ Thu, 29 Jun 2006 17:38:37 +0200
 	- sexy_spell_entry_activate_default_languages
 * Added bindings for SexyTreeView and SexyTooltip.
 * Added examples for SexyTreeView and SexyTooltip.
+
 Sun, 29 Jan 2005 15:37:49 +0100
 * Fixed MANIFEST.
+
 Sun, 04 Dec 2005 18:29:52 +0100
 * Version: 0.01
 * Initial release.
