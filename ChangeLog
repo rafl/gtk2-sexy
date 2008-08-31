@@ -1,4 +1,8 @@
 Thu, 12 Jun 2008 14:35:33 +0200
+* Version: 0.04
+* Exit Makefile.PL if pkg-config couldn't find the prereqs.
+
+Sun, 31 Aug 2008 22:48:15 +0200
 * Version: 0.03
 * Add pod and podcoverage tests.
 * Specify prototyping behaviour in the xs files.
