@@ -19,7 +19,15 @@ sub sexy {
 
     mkdir 'build', 0777;
 
-    my %pkgconfig = ExtUtils::PkgConfig->find('libsexy');
+    my %pkgconfig;
+    eval {
+       %pkgconfig = ExtUtils::PkgConfig->find('libsexy');
+    };
+
+    if (my $error = $@) {
+        print STDERR $@;
+        return;
+    }
 
     Gtk2::CodeGen->parse_maps('sexy');
     Gtk2::CodeGen->write_boot(ignore => qr/^Gtk2::Sexy$/);
@@ -43,6 +51,8 @@ sub sexy {
             Glib::MakeHelper->do_pod_files(@xs_files),
         },
     );
+
+    return 1;
 }
 
 
