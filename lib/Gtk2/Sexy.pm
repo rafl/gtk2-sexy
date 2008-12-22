@@ -5,6 +5,7 @@ package Gtk2::Sexy;
 
 our $VERSION = '0.04';
 
+use Gtk2;
 use base 'DynaLoader';
 
 sub dl_load_flags { 0x01 }
