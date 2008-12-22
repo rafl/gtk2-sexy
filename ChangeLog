@@ -1,3 +1,7 @@
+Mon, 22 Dec 2008 12:06:48 +0100
+* Version 0.05
+* Load Gtk2.pm to make manifypods work on cygwin (closes RT#41845).
+
 Thu, 12 Jun 2008 14:35:33 +0200
 * Version: 0.04
 * Exit Makefile.PL if pkg-config couldn't find the prereqs.
